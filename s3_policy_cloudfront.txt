@@ -1,0 +1,26 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::530120981511:user/waydope"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::waydope/*",
+                "arn:aws:s3:::waydope"
+            ]
+        },
+        {
+            "Sid": "3",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E3H3HPHRB0VBN2"
+            },
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::waydope/*"
+        }
+    ]
+}

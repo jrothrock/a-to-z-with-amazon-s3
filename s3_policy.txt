@@ -1,0 +1,26 @@
+{
+  "Id": "Policy1505089947843",
+  "Version": "2012-10-17",
+  "Statement": [
+     {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::*********:user/jackrothrock-test"
+            },
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::jackrothrock-test/*",
+                "arn:aws:s3:::jackrothrock-test"
+            ]
+    },
+    {
+      "Sid": "Stmt1505089275790",
+      "Action": "s3:GetObject",
+      "Effect": "Allow",
+      "Resource": "arn:aws:s3:::jackrothrock-test/*",
+      "Principal": "*"
+    }
+  ]
+}
+

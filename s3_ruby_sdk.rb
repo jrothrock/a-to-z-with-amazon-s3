@@ -1,0 +1,1 @@
+Aws::S3::Resource.new(access_key_id: "AKIAJO5YMIPGL65XBSWQ", secret_access_key: "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", region: "us-west-2").bucket("jackrothrock-test").object("uploads/img.png").presigned_post(options={:acl=>"public-read",:content_type=>"image/png"}).fields
